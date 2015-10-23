@@ -1,0 +1,19 @@
+{
+  "name": "understanding-rx",
+  "version": "1.0.0",
+  "description": "A guide to understanding RxJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/alexlrobertson/understanding-rx.git"
+  },
+  "author": "Alex Robertson <alex.robertson@uptake.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexlrobertson/understanding-rx/issues"
+  },
+  "homepage": "https://github.com/alexlrobertson/understanding-rx#readme"
+}

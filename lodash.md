@@ -1,0 +1,2 @@
+map | map
+pluck | pluck

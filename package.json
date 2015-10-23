@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/alexlrobertson/understanding-rx/issues"
   },
-  "homepage": "https://github.com/alexlrobertson/understanding-rx#readme"
+  "homepage": "https://github.com/alexlrobertson/understanding-rx#readme",
+  "dependencies": {
+    "rx": "^4.0.6"
+  }
 }

@@ -12,6 +12,15 @@ RxJS presents a low level, standardized API to subscribe to changes in data.
 
 Data-bound frameworks like Angular have capitalized on checking for changes on application data and informing parts of the application that relevant data has been changed. Frameworks frequently implement this data-binding using dirty checking where scopes are scanned for changes [[1]](#1).
 
+## Lodash
+
+Rx’s enables functional programming in similar ways to other function libraries, but over observable collections. [Lodash](https://github.com/alexlrobertson/understanding-rx/blob/master/lodash.md) is a frequently used javascript library and has many equivalent functions in Rx.
+
+## TODO
+
+* Angular 2
+* Promises
+
 ## References
 
 <a id="0"></a>

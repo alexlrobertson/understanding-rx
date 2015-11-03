@@ -20,6 +20,8 @@ Rx’s enables functional programming in similar ways to other function librarie
 
 * Angular 2
 * Promises
+* Websockets
+* DOM events
 
 ## References
 

@@ -16,6 +16,12 @@ Data-bound frameworks like Angular have capitalized on checking for changes on a
 
 Rx’s enables functional programming in similar ways to other function libraries, but over observable collections. [Lodash](https://github.com/alexlrobertson/understanding-rx/blob/master/lodash.md) is a frequently used javascript library and has many equivalent functions in Rx.
 
+## Which?
+
+[By Category](https://github.com/Reactive-Extensions/RxJS/blob/master/doc/gettingstarted/categories.md)
+[Creation Operators](https://github.com/Reactive-Extensions/RxJS/blob/master/doc/gettingstarted/which-static.md)
+[Instance Operators](https://github.com/Reactive-Extensions/RxJS/blob/master/doc/gettingstarted/which-instance.md)
+
 ## TODO
 
 * Angular 2

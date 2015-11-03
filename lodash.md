@@ -1,3 +1,7 @@
+# Lodash and Rx
+
+Typically if a Lodash function returns a collection, in Rx it emits the values to subscribers.
+
 ## TLDR
 
 lodash      | Rx
@@ -110,4 +114,81 @@ Rx.Observable.range(1, 3)
     .subscribe(console.log)
 
 // [ [ 1, 1 ], [ 2, 2 ], [ 3, 3 ] ]
+```
+
+## includes
+
+`includes` works similarly between Lodash and Rx. Rx emits a singular boolean value whereas Lodash ends the chain and returns the boolean value.
+
+```js
+console.log(
+    _([1, 2, 3])
+        .includes(2)
+)
+
+console.log(
+    _([1, 2, 3])
+        .includes(42)
+)
+    
+// true
+// false
+
+Rx.Observable.range(1, 3)
+    .includes(2)
+    .subscribe(console.log);
+
+Rx.Observable.range(1, 3)
+    .includes(42)
+    .subscribe(console.log);
+
+// true
+// false
+```
+
+## last
+
+`last` works similarly between Lodash and Rx, like [`first`](#first). Rx emits a singular value whereas Lodash ends the chain and returns the value.
+
+```js
+console.log(
+    _([1, 2, 3])
+        .last()
+)
+
+// 3
+
+Rx.Observable.range(1, 3)
+    .last()
+    .subscribe(console.log)
+
+// 3
+```
+
+## map
+
+`map` works equivalently between Lodash and Rx.
+
+```js
+_([1, 2, 3])
+    .map(function (item) {
+        return {
+            value: item
+        };
+    })
+    .tap(console.log)
+    .value()
+    
+// [ { value: 1 }, { value: 2 }, { value: 3 } ]
+
+Rx.Observable.range(1, 3)
+    .map(function (item) {
+        return {
+            value: item
+        };
+    })
+    .toArray()
+    .subscribe(console.log);
+
+// [ { value: 1 }, { value: 2 }, { value: 3 } ]
 ```

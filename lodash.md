@@ -1,10 +1,12 @@
+## TLDR
+
 lodash      | Rx
 ------------|---
 concat      | concat
 filter      | filter
 first       | first
 groupBy     | groupBy
-includes    | contains
+includes    | includes
 last        | last
 map         | map
 pluck       | pluck
@@ -16,7 +18,7 @@ takeRight   | takeLast
 takeWhile   | takeWhile
 zip         | zip
 
-# concat
+## concat
 
 `concat` translates exactly as you would expect between Lodash and Rx. It appends a series to the end of another series.
 
@@ -36,7 +38,7 @@ Rx.Observable.range(1, 3)
 // [1, 2, 3, 4, 5, 6]
 ```
 
-# filter
+## filter
 
 `filter` translates exactly as you would expect between Lodash and Rx. It filters out items that fail the predicate.
 
@@ -60,7 +62,7 @@ Rx.Observable.range(1, 3)
 // [1, 3]
 ```
 
-# first
+## first
 
 `first` translates roughly to the same function in Rx. Lodash’s implementation returns the first value, whereas Rx’s implementation returns an Observable sequence with only the first value.
 
@@ -80,7 +82,7 @@ Rx.Observable.range(1, 3)
 // 1
 ```
 
-# groupBy
+## groupBy
 
 `groupBy` works similarly between Lodash and Rx. Rx’s implementation emits Observables whereas Lodash results in an key/value object where the key is the value used to group and the value is an array of selected items.
 

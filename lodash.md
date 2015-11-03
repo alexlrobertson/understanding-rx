@@ -192,3 +192,178 @@ Rx.Observable.range(1, 3)
 
 // [ { value: 1 }, { value: 2 }, { value: 3 } ]
 ```
+
+## pluck
+
+`pluck` works equivalently between Lodash and Rx.
+
+```js
+_([1, 2, 3])
+    .map(function (item) {
+        return {
+            value: item
+        };
+    })
+    .pluck('value')
+    .tap(console.log)
+    .value()
+    
+// [1, 2, 3]
+
+Rx.Observable.range(1, 3)
+    .map(function (item) {
+        return {
+            value: item
+        };
+    })
+    .pluck('value')
+    .toArray()
+    .subscribe(console.log);
+
+// [1, 2, 3]
+```
+
+## reduce
+
+`reduce` works similarly between Lodash and Rx. Lodash returns the result as the value of the chain whereas Rx emits the reduced value.
+
+```js
+console.log(
+    _([1, 2, 3])
+        .reduce(function (memo, item) {
+            return memo + item;
+        }, 42)
+)
+    
+// 48
+
+Rx.Observable.range(1, 3)
+    .reduce(function (memo, item) {
+        return memo + item;
+    }, 42)
+    .subscribe(console.log);
+
+// 48
+```
+
+## size/count
+
+Lodash’s `size` has an equivalent `count` in Rx. Lodash returns the result as the value of the chain whereas Rx emits the value.
+
+```js
+console.log(
+    _([1, 2, 3])
+        .size()
+)
+    
+// 3
+
+Rx.Observable.range(1, 3)
+    .count()
+    .subscribe(console.log);
+
+// 3
+```
+
+## tap
+
+`tap` works equivalently between Rx and Lodash. `tap` allows arbitrary interception of the chain.
+
+```js
+_([1, 2, 3])
+    .tap(console.log)
+    .value()
+    
+// [1, 2, 3]
+
+Rx.Observable.range(1, 3)
+    .toArray()
+    .tap(console.log)
+    .subscribe();
+
+// [1, 2, 3]
+```
+
+## take
+
+`take` works equivalently between Rx and Lodash.
+
+```js
+_([1, 2, 3])
+    .take(2)
+    .tap(console.log)
+    .value()
+    
+// [1, 2]
+
+Rx.Observable.range(1, 3)
+    .take(2)
+    .toArray()
+    .subscribe(console.log);
+
+// [1, 2]
+```
+
+## takeRight
+
+Rx’s `takeLast` works equivalently to Lodash’s `takeRight`.
+
+```js
+_([1, 2, 3])
+    .takeRight(2)
+    .tap(console.log)
+    .value()
+    
+// [2, 3]
+
+Rx.Observable.range(1, 3)
+    .takeLast(2)
+    .toArray()
+    .subscribe(console.log);
+
+// [2, 3]
+```
+
+## takeWhile
+
+`takeWhile` works equivalently between Lodash and Rx.
+
+```js
+_([1, 2, 3])
+    .takeWhile(function (item) {
+        return item < 3;
+    })
+    .tap(console.log)
+    .value()
+    
+// [1, 2]
+
+Rx.Observable.range(1, 3)
+    .takeWhile(function (item) {
+        return item < 3;
+    })
+    .toArray()
+    .subscribe(console.log);
+
+// [1, 2]
+```
+
+## zip
+
+`zip` works equivalently between Lodash and Rx.
+
+```js
+_(_.range(1, 4))
+    .zip(_.range(4, 7))
+    .tap(console.log)
+    .value()
+    
+// [ [ 1, 4 ], [ 2, 5 ], [ 3, 6 ] ]
+
+Rx.Observable.range(1, 3)
+    .zip(Rx.Observable.range(4, 3))
+    .toArray()
+    .subscribe(console.log);
+
+// [ [ 1, 4 ], [ 2, 5 ], [ 3, 6 ] ]
+```

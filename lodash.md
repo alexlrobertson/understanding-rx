@@ -82,6 +82,8 @@ Rx.Observable.range(1, 3)
 
 # groupBy
 
+`groupBy` works similarly between Lodash and Rx. Rx’s implementation emits Observables whereas Lodash results in an key/value object where the key is the value used to group and the value is an array of selected items.
+
 ```js
 _(_.range(1, 4))
     .concat(_.range(1, 4))

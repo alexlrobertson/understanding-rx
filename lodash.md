@@ -6,9 +6,9 @@ Typically if a Lodash function returns a collection, in Rx it emits the values t
 
 lodash      | Rx       | Equality
 ------------|----------|---------
-concat      | concat   | =
-filter      | filter   | =
-first       | first    | ~
+concat      | concat   | [`=`](#concat)
+filter      | filter   | [`=`](#filter)
+first       | first    | [`~`](#first)
 groupBy     | groupBy  | ~
 includes    | includes | ~
 last        | last     | ~
